@@ -4,7 +4,7 @@
 
 ---
 
-## 👥 Integrante
+## Integrante
 
 - [Vítor Saraiva de Souza]
 
@@ -13,7 +13,8 @@
 ## 1. Plano de Testes
 
 ### 1.1 Objetivo
-Descreva o objetivo do plano de testes.
+
+Validar as principais funcionalidades do sistema LocalEats, garantindo que atendam aos requisitos esperados e apresentem comportamento consistente, especialmente nas áreas onde já foram identificados problemas, como busca de restaurantes e finalização de pedidos.
 
 **Exemplo:**  
 Validar as principais funcionalidades do sistema LocalEats, garantindo que atendam aos requisitos esperados e apresentem comportamento consistente.
@@ -23,13 +24,14 @@ Validar as principais funcionalidades do sistema LocalEats, garantindo que atend
 ### 1.2 Escopo
 
 **O que será testado:**
-- [Funcionalidade 1]  
-- [Funcionalidade 2]  
-- [Funcionalidade 3]  
+- Login  
+- Busca de restaurantes  
+- Finalização de pedidos  
+- Avaliações  
 
 **O que não será testado:**
-- [Exemplo: integração com sistemas externos]  
-- [Outros itens fora do escopo]  
+- Integrações externas (ex: sistemas de pagamento)  
+- Funcionalidades administrativas  
 
 ---
 
@@ -37,11 +39,10 @@ Validar as principais funcionalidades do sistema LocalEats, garantindo que atend
 
 Lista das funcionalidades que serão foco dos testes:
 
-- [Login/Cadastro]  
-- [Busca de restaurantes]  
-- [Pedido]  
-- [Avaliação]  
-- [Outro]  
+- Login  
+- Busca de restaurantes  
+- Pedido  
+- Avaliação 
 
 ---
 
@@ -50,12 +51,10 @@ Lista das funcionalidades que serão foco dos testes:
 Descreva como os testes serão realizados.
 
 **Tipos de teste:**
-- ( ) Funcional  
-- ( ) Usabilidade  
-- ( ) Outros: _______  
+- Testes funcionais  
 
 **Abordagem:**  
-Exemplo: testes manuais baseados em cenários definidos anteriormente.
+Testes manuais baseados em cenários simples.
 
 ---
 
@@ -63,87 +62,68 @@ Exemplo: testes manuais baseados em cenários definidos anteriormente.
 
 | Nome | Responsabilidade |
 |------|------------------|
-|      |                  |
+| Vítor Saraiva de Souza | Planejamento, execução e análise dos testes |
 
 ---
 
 ## 2. Casos de Teste
 
-### CT-01 – [Título do teste]
+### CT-01 – Login com sucesso
 
-**Pré-condição:**  
-[Descrever condição necessária]
+**Pré-condição:** Usuário cadastrado  
 
 **Passos:**
-1.  
-2.  
-3.  
+1. Acessar login  
+2. Inserir dados válidos  
+3. Clicar em entrar  
 
-**Dados de entrada (se aplicável):**  
-[Descrever]
-
-**Resultado esperado:**  
-[Descrever claramente]
+**Resultado esperado:** Login realizado  
 
 ---
 
-### CT-02 – [Título do teste]
+### CT-02 – Login com erro
 
-**Pré-condição:**  
+**Pré-condição:** Usuário cadastrado  
 
 **Passos:**
-1.  
-2.  
-3.  
+1. Inserir senha errada  
+2. Clicar em entrar  
 
-**Dados de entrada (se aplicável):**  
-
-**Resultado esperado:**  
+**Resultado esperado:** Exibir erro  
 
 ---
 
-### CT-03 – [Título do teste]
+### CT-03 – Busca de restaurante
 
-**Pré-condição:**  
+**Pré-condição:** Usuário logado  
 
 **Passos:**
-1.  
-2.  
-3.  
+1. Buscar restaurante  
+2. Ver resultados  
 
-**Dados de entrada (se aplicável):**  
-
-**Resultado esperado:**  
+**Resultado esperado:** Mostrar resultados  
 
 ---
 
-### CT-04 – [Título do teste]
+### CT-04 – Finalizar pedido
 
-**Pré-condição:**  
+**Pré-condição:** Produto no carrinho  
 
 **Passos:**
-1.  
-2.  
-3.  
+1. Finalizar pedido  
 
-**Dados de entrada (se aplicável):**  
-
-**Resultado esperado:**  
+**Resultado esperado:** Pedido concluído  
 
 ---
 
-### CT-05 – [Título do teste]
+### CT-05 – Avaliar restaurante
 
-**Pré-condição:**  
+**Pré-condição:** Usuário logado  
 
 **Passos:**
-1.  
-2.  
-3.  
+1. Inserir avaliação  
 
-**Dados de entrada (se aplicável):**  
-
-**Resultado esperado:**  
+**Resultado esperado:** Avaliação salva   
 
 ---
 
@@ -151,46 +131,49 @@ Exemplo: testes manuais baseados em cenários definidos anteriormente.
 
 Preencha a tabela com os resultados obtidos.
 
-| Caso de Teste | Resultado (Passou/Falhou) | Evidência (descrição ou print) |
-|---------------|---------------------------|--------------------------------|
-| CT-01 | | |
-| CT-02 | | |
-| CT-03 | | |
-| CT-04 | | |
-| CT-05 | | |
+| Caso de Teste | Resultado | Evidência |
+|---------------|----------|-----------|
+| CT-01 | Passou | Login realizado corretamente |
+| CT-02 | Passou | Mensagem de erro exibida |
+| CT-03 | Falhou | Resultados incorretos na busca |
+| CT-04 | Falhou | Erro ao finalizar pedido |
+| CT-05 | Falhou | Avaliação não persistiu |
 
 ---
 
 ## 4. Análise dos Resultados
 
-**Quantidade de testes concluídos:**  
-**Quantidade de testes que passaram:**  
-**Quantidade de testes que falharam:**  
+**Testes executados:** 5  
+**Passaram:** 2  
+**Falharam:** 3  
 
-**Principais problemas encontrados:**
-- [Problema 1]  
-- [Problema 2]  
-- [Problema 3]  
+**Problemas encontrados:**
+- Busca com erro  
+- Falha no pedido  
+- Problema na avaliação
 
 ---
 
 ## 5. Reflexão
 
-**O plano de testes ajudou a organizar melhor o processo? Por quê?**  
+**O plano de testes ajudou a organizar melhor os testes? Por quê?**  
+Sim, o plano de testes ajudou a estruturar o processo, permitindo uma execução mais organizada e focada nos principais problemas do sistema.
 
 ---
 
-**Algum problema só foi identificado durante a execução? Explique.**  
+**Algum problema só foi percebido durante a execução?**  
+Sim, o erro na finalização de pedidos ficou mais evidente durante a execução, demonstrando falhas críticas que impactam diretamente o uso da plataforma.
 
 ---
 
-**O que você melhoraria no processo de testes?**  
+**O que melhoraria no processo de testes?**  
+Melhoraria a cobertura de testes, incluindo mais cenários de erro, além de testes automatizados e testes de desempenho.
 
 ---
 
-### Conclusão
+## Conclusão
 
-Descreva se o comportamento da funcionalidade foi considerado aceitável e por quê.
+As funcionalidades testadas não apresentaram comportamento totalmente aceitável, pois foram identificadas falhas críticas na busca de restaurantes, na finalização de pedidos e na persistência de avaliações. Esses problemas impactam diretamente a experiência do usuário e o uso do sistema.
 
 ---
 
@@ -198,7 +181,7 @@ Descreva se o comportamento da funcionalidade foi considerado aceitável e por q
 
 **Resumo final:**
 
-- Qualidade geral do sistema testado  
-- Pontos positivos  
-- Principais problemas identificados  
-- Impressão geral sobre o processo de testes  
+- **Qualidade geral do sistema:** Média, com falhas relevantes  
+- **Pontos positivos:** Login funcional e tratamento básico de erros  
+- **Principais problemas identificados:** Busca incorreta, falhas em pedidos e avaliações  
+- **Impressão geral:** O sistema ainda precisa de melhorias antes de ser considerado estável e confiável
